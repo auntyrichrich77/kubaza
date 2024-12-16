@@ -1,0 +1,188 @@
+/* Container styling */
+.inspiration-container {
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.inspiration-header {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #34495e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout */
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Individual grid items */
+.inspiration-item {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  margin: 0 auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.inspiration-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.inspiration-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.inspiration-item:hover .inspiration-image {
+  transform: scale(1.1);
+  filter: brightness(0.85) contrast(1.1);
+}
+
+/* Description on top-left */
+.image-description {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 80%;
+  display: none;
+  z-index: 2;
+}
+
+.inspiration-item:hover .image-description {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Add to cart on top-right */
+.add-to-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff4d4d;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: none;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inspiration-item:hover .add-to-cart {
+  display: block;
+  animation: slideInTop 0.4s ease;
+}
+
+/* Options menu on bottom-right */
+.options-menu {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.inspiration-item:hover .options-menu {
+  display: block;
+}
+
+/* Three dots styling */
+.options-dots {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 18px;
+}
+
+/* Dropdown links */
+.options-dropdown {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.options-dropdown a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #34495e;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.options-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.options-dropdown a:hover {
+  background: #f0f0f0;
+  color: #ff4d4d;
+}
+
+/* Show dropdown links when hovering */
+.options-menu:hover .options-dropdown {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

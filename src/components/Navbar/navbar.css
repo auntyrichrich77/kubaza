@@ -1,0 +1,124 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.navbar-logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Menu Container */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links */
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ff6600; /* Splash of orange */
+}
+
+/* Dropdown Wrapper */
+.navbar-dropdown {
+  position: relative;
+}
+
+/* Button Styling for Dropdown */
+.navbar-dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-dropdown-button:hover {
+  color: #ff6600; /* Splash of orange */
+}
+
+/* Arrow Rotation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg); /* Rotate the arrow when open */
+}
+
+/* Dropdown Content */
+.navbar-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Dropdown Links */
+.navbar-dropdown-content a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar-dropdown-content a:hover {
+  background-color: #ff6600; /* Splash of orange */
+  color: white;
+}
+
+/* Login Button */
+.navbar-login-button {
+  background-color: #ff6600; /* Splash of orange */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar-login-button:hover {
+  background-color: #ff9933; /* Darker orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-menu {
+      flex-direction: column;
+  }
+
+  .navbar-link {
+      margin: 10px 0;
+  }
+}

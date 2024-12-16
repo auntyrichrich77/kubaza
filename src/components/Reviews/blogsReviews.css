@@ -1,0 +1,87 @@
+.blogs-reviews-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); /* Light gradient background */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+.blogs-reviews-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.blogs-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.blogs-reviews-item {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.blogs-reviews-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 123, 255, 0.5); /* Adds a highlight effect */
+}
+
+.blogs-reviews-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.blogs-reviews-item:hover::before {
+  opacity: 1;
+}
+
+.blogs-reviews-item h3 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.blogs-reviews-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  z-index: 1;
+}
+
+.blogs-reviews-item .author {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #007bff;
+  font-style: italic;
+  z-index: 1;
+}
+
+/* Color-coded borders */
+.blog-item {
+  border-left: 8px solid #ff7f50; /* Coral for blogs */
+}
+
+.review-item {
+  border-left: 8px solid #32cd32; /* Lime Green for reviews */
+}

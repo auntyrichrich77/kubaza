@@ -1,0 +1,98 @@
+/* Footer Styling */
+.footer {
+  background-color: #1f1f1f; /* Dark background for better contrast */
+  padding: 50px 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif; /* A modern font family for a clean look */
+}
+
+/* Footer Top Section */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Column Headings */
+.footer-column h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #f28e00; /* Orange color for headings */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Column Lists */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #bbb;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Hover effect for list items */
+.footer-column ul li:hover {
+  color: #f28e00; /* Orange color for hover effect */
+  cursor: pointer;
+  padding-left: 8px; /* Subtle slide effect */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  color: #bbb;
+}
+
+/* Copyright Text */
+.footer-bottom p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.social-icons .icon {
+  font-size: 1.5rem;
+  color: #bbb;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for social icons */
+.social-icons .icon:hover {
+  color: #f28e00; /* Orange color for hover effect */
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,48 @@
+.last-remarks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #494545;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.last-remarks-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f5f1f1;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Add splash of orange to the word Kubaza */
+.last-remarks-text .highlight {
+  color: #FFA500; /* Orange */
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.join-now-button {
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #FFA500; /* Orange */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a more prominent button */
+}
+
+.join-now-button:hover {
+  background-color: #FF7F00; /* Darker orange */
+  transform: scale(1.05);
+}
+
+.join-now-button:active {
+  transform: scale(1.02); /* Slightly shrink on click */
+}
